@@ -1,6 +1,6 @@
 
 
-<p align="center"><img src="https://massgrave.dev/img/logo_small.png" alt="MAS Logo"></p>
+<p align="center"><img src=" https://yofukashino.github.io/MyShellFolders/assets/powershell.webp" alt="powershell icon"></p>
 
 <h1 align="center">My Shell Folders</h1>
 
