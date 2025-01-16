@@ -9,8 +9,11 @@ $FolderName = Read-Host "Enter the name of the folder"
 $FolderHint = Read-Host "Enter a hint for the folder"
 $FolderBrowser = New-Object System.Windows.Forms.FolderBrowserDialog
 $FolderBrowser.Description = "Select the folder location"
+$FolderBrowser.RootFolder = [System.Environment+SpecialFolder]::Desktop  
+[void][System.Windows.Forms.Application]::DoEvents() 
 if ($FolderBrowser.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) {
     $FolderLocation = $FolderBrowser.SelectedPath
+    Write-Host "Selected Folder: $FolderLocation"
 } else {
     Write-Host "No folder selected. Exiting script."
     exit
