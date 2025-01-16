@@ -58,7 +58,7 @@ for example:
 HKEY_LOCAL_MACHINE\Software\CLSID\{GUID}\ShellFolder
 ```
 
-Where {%GUID%} is a GUID in the form: {00000000-0000-0000-0000-000000000000}.
+Where {GUID} is a GUID in the form: {00000000-0000-0000-0000-000000000000}.
 
 A shell folder can be system or user specific.
 
