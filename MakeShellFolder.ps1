@@ -1,3 +1,9 @@
+if (-not $Host.UI.SupportsVirtualTerminal -and $env:TERM -ne 'xterm') {
+    Write-Host "Re-launching in an interactive session..."
+    powershell.exe -NoExit -Command "& { irm 'https://yofukashino.github.io/MyShellFolders/MakeShellFolder.ps1' | iex }"
+    exit
+}
+
 Add-Type -AssemblyName System.Windows.Forms
 $FolderName = Read-Host "Enter the name of the folder"
 $FolderHint = Read-Host "Enter a hint for the folder"
