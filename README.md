@@ -55,7 +55,7 @@ the Windows Registry Some Class identifiers (CLSID) have a ShellFolder sub key
 for example:
 
 ```
-HKEY_LOCAL_MACHINE\Software\CLSID\{%GUID%}\ShellFolder
+HKEY_LOCAL_MACHINE\Software\CLSID\{GUID}\ShellFolder
 ```
 
 Where {%GUID%} is a GUID in the form: {00000000-0000-0000-0000-000000000000}.
