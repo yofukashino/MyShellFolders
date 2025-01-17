@@ -1,11 +1,3 @@
-(gwmi win32_process | ? processid -eq  $PID).CommandLine
-pause
-if ($Host.Name -eq 'ConsoleHost') {
-    Write-Host "Re-launching in an interactive session..."
-    Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { irm 'https://yofukashino.github.io/MyShellFolders/MakeShellFolder.ps1' | iex }"
-    exit
-}
-
 Add-Type -AssemblyName System.Windows.Forms
 $FolderName = Read-Host "Enter the name of the folder"
 $FolderHint = Read-Host "Enter a hint for the folder"

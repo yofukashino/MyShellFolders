@@ -23,7 +23,7 @@ To add Recycle Bin support without altering the default shell folders, I created
 1.   Open PowerShell As Admin(Not CMD). To do that, right-click on the Windows start menu and select PowerShell (Admin) or Terminal (Admin).
 2.   Copy and paste the code below and press enter  
 ```
-irm https://yofukashino.github.io/MyShellFolders/MakeShellFolder.ps1 | iex
+Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { irm 'https://yofukashino.github.io/MyShellFolders/MakeShellFolder.ps1' | iex }"
 ```
 3.   Input the Shell folder name and description.
 4.   Select the location you want to use as default for shell folder.
