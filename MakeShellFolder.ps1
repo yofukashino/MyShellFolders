@@ -1,6 +1,6 @@
 if (-not $Host.UI.SupportsVirtualTerminal -and $env:TERM -ne 'xterm') {
     Write-Host "Re-launching in an interactive session..."
-    powershell.exe -NoExit -Command "& { irm 'https://yofukashino.github.io/MyShellFolders/MakeShellFolder.ps1' | iex }"
+    Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { irm 'https://yofukashino.github.io/MyShellFolders/MakeShellFolder.ps1' | iex }"
     exit
 }
 
@@ -10,7 +10,6 @@ $FolderHint = Read-Host "Enter a hint for the folder"
 $FolderBrowser = New-Object System.Windows.Forms.FolderBrowserDialog
 $FolderBrowser.Description = "Select the folder location"
 $FolderBrowser.RootFolder = [System.Environment+SpecialFolder]::Desktop  
-[void][System.Windows.Forms.Application]::DoEvents() 
 if ($FolderBrowser.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) {
     $FolderLocation = $FolderBrowser.SelectedPath
     Write-Host "Selected Folder: $FolderLocation"
