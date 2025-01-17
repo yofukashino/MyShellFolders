@@ -1,6 +1,4 @@
-# test
-$MyInvocation.MyCommand
-if (-not $Host.UI.SupportsVirtualTerminal -and $env:TERM -ne 'xterm') {
+if (-not $MyInvocation.MyCommand.Name) {
     Write-Host "Re-launching in an interactive session..."
     Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "& { irm 'https://yofukashino.github.io/MyShellFolders/MakeShellFolder.ps1' | iex }"
     exit
